@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalAccountingSystem", "AnimalAccountingSystem\AnimalAccountingSystem.csproj", "{9EC35EE7-5FC8-426A-87F6-98838D5AC095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{9040557B-7836-4190-8426-64FBDBEE9A84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EC35EE7-5FC8-426A-87F6-98838D5AC095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC35EE7-5FC8-426A-87F6-98838D5AC095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC35EE7-5FC8-426A-87F6-98838D5AC095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC35EE7-5FC8-426A-87F6-98838D5AC095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9040557B-7836-4190-8426-64FBDBEE9A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9040557B-7836-4190-8426-64FBDBEE9A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9040557B-7836-4190-8426-64FBDBEE9A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9040557B-7836-4190-8426-64FBDBEE9A84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E864D331-EE79-4A8B-B7F6-AB99113F54E4}
+	EndGlobalSection
+EndGlobal
