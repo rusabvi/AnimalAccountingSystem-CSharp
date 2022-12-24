@@ -181,7 +181,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void Select_byRequest1()
+        public void Select1()
         {
             // Array
             var animalRepository = new AnimalRepository();
@@ -217,7 +217,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void Select_byRequest2()
+        public void Select2()
         {
             // Array
             var animalRepository = new AnimalRepository();
@@ -260,7 +260,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void Select_byRequest3()
+        public void Select3()
         {
             // Array
             var animalRepository = new AnimalRepository();
@@ -297,7 +297,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void Select_byRequest4()
+        public void Select4()
         {
             // Array
             var animalRepository = new AnimalRepository();
@@ -332,7 +332,20 @@ namespace Tests
         }
 
         [TestMethod]
-        public void Select_byRequest5()
+        public void Select5()
+        {
+            // Array
+            var animalRepository = new AnimalRepository();
+            var animals = new AnimalList();
+            animalRepository.SetAnimals(animals);
+            var request = "weit: light, heit: little, fud tipe: all";
+
+            // Act and Assert
+            Assert.ThrowsException<FormatException>(() => Selecter.Select(animalRepository, request));
+        }
+
+        [TestMethod]
+        public void SelectFrom1()
         {
             // Array
             var animalRepository = new AnimalRepository();
@@ -356,10 +369,28 @@ namespace Tests
             animals.Add(new Animal("heavy", "big", "grass"));
             animals.Add(new Animal("heavy", "big", "meat"));
             animalRepository.SetAnimals(animals);
-            var request = "weit: light, heit: little, fud tipe: all";
+            var pathToFile = @"..\..\..\Request.txt";
+            var expectedAnimals = new AnimalList();
+            expectedAnimals.Add(animals[0]);
+
+            // Act
+            var resultAnimals = Selecter.SelectFrom(pathToFile, animalRepository);
+
+            // Assert
+            Assert.AreEqual(expectedAnimals, resultAnimals);
+        }
+
+        [TestMethod]
+        public void SelectFrom2()
+        {
+            // Array
+            var animalRepository = new AnimalRepository();
+            var animals = new AnimalList();
+            animalRepository.SetAnimals(animals);
+            var pathToFile = @"..\..\..\wrongPathToFile.txt";
 
             // Act and Assert
-            Assert.ThrowsException<FormatException>(() => Selecter.Select(animalRepository, request));
+            Assert.ThrowsException<FileNotFoundException>(() => Selecter.SelectFrom(pathToFile, animalRepository));
         }
     }
 }
